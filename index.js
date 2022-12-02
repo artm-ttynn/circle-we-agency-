@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 document.body.addEventListener('click', (e) => {
     const $el = e.target
-    if ($el.tagName === 'BUTTON' && $el.classList.contains('t668__trigger-button')) {
+    if ($el.classList.contains('t668__header')) {
         console.log($el)
         console.log('kek')
     }
