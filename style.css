@@ -20,7 +20,7 @@ section {
     width: 500px;
 }
 
-sldr__wrapper * {
+.sldr__wrapper * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
