@@ -24,7 +24,7 @@ document.body.addEventListener('click', (e) => {
     }
 })
 
-function renderArrow (position) {
+function renderArrow(position) {
     return `<button class="arrow ${position}">
         <div>
             <svg role="presentation" focusable="false" style="display: block" viewBox="0 0 9.3 17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
