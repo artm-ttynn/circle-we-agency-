@@ -50,7 +50,7 @@ const sldrTemp = `
             <div class="sldr__control"></div>
             <div class="sldr__list">
                 <div>
-                    <img data-lazy="https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg"/>
+                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg"/>
                 </div>
                 <div>
                     <img data-lazy="https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg"/>
