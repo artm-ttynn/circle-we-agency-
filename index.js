@@ -17,6 +17,14 @@ $(document).ready(function(){
     });
 });
 
+document.body.addEventListener('click', (e) => {
+    const $el = e.target
+    if ($el.tagName === 'BUTTON' && $el.classList.contain('t668__trigger-button')) {
+        console.log($el)
+        console.log('kek')
+    }
+})
+
 function renderArrow (position) {
     return `<button class="arrow ${position}">
         <div>
