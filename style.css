@@ -16,7 +16,7 @@ section {
     width: 500px;
 }*/
 .t668__content {
-    max-height: auto;
+    max-height: auto !important;
 }
 
 .sldr__wrapper {
