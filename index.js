@@ -66,16 +66,13 @@ const sldrTemp = `
             <div class="sldr__control"></div>
             <div class="sldr__list">
                 <div>
-                    <!-- <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg"/> -->
-                    1
+                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg"/>
                 </div>
                 <div>
-                    <!-- <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg"/> -->
-                    2
+                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg"/>
                 </div>
                 <div>
-                    <!-- <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-03.jpg"/> -->
-                    3
+                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-03.jpg"/>
                 </div>
             </div>
         </div>
