@@ -16,6 +16,10 @@ section {
     width: 500px;
 }*/
 
+.sldr__wrapper {
+    width: 500px;
+}
+
 .sldr__container {
     position: relative;
     display: flex;
