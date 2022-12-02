@@ -19,7 +19,7 @@
 
 document.body.addEventListener('click', (e) => {
     const $el = e.target
-    if ($el.tagName === 'BUTTON' && $el.classList.contains('t668__trigger-button')) {
+    if ($el.tagName === 'BUTTON') {
         console.log($el)
         
         const block = `t668`;
