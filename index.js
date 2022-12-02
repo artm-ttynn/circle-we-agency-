@@ -35,6 +35,8 @@ function renderArrow (position) {
 };
 
 const sldrTemp = `
+    <div style="width: 100%; display: flex; justify-content: center;">
+    
     <div class="sldr__wrapper">
         <div class="sldr__container">
             <div class="sldr__control"></div>
@@ -51,4 +53,4 @@ const sldrTemp = `
             </div>
         </div>
         <div class="sldr__points"></div>
-    </div>`;
+    </div></div>`;
