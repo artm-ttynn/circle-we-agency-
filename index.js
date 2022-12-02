@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     const block = `t668`;
     const $wrapper = document.querySelector(`.${block}__textwrapper`)
     $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
@@ -15,12 +15,29 @@ $(document).ready(function(){
         nextArrow: renderArrow(`next`),
         appendArrows: $(`.sldr__control`),
     });
-});
+});*/
 
 document.body.addEventListener('click', (e) => {
     const $el = e.target
-    if ($el.tagName === 'BUTTON') {
+    if ($el.tagName === 'BUTTON' && $el.classList.contains('t668__trigger-button')) {
         console.log($el)
+        
+        const block = `t668`;
+        const $wrapper = document.querySelector(`.${block}__textwrapper`)
+        $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
+
+        $('.sldr__list').slick({
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: `linear`,
+            dots: true,
+            appendDots: $(`.sldr__points`),
+            prevArrow: renderArrow(`prev`),
+            nextArrow: renderArrow(`next`),
+            appendArrows: $(`.sldr__control`),
+        });
     }
 })
 
