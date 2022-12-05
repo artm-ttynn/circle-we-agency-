@@ -9,15 +9,24 @@ $buttons.forEach(($button) => {
         
         if (!watcher.lastClickedButton) {
             watcher.lastClickedButton = e.currentTarget;
-            watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling;
+            watcher.lastContent = e.currentTarget.parentElement.nextElementSibling;
         } else {
             watcher.beforeLastClickedButton = watcher.lastClickedButton
-            watcher.beforeLastHeader = watcher.lastHeader
+            watcher.beforeLastContent = watcher.lastContent
             watcher.lastClickedButton = e.currentTarget
-            watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling
+            watcher.lastContent = e.currentTarget.parentElement.nextElementSibling
             
             console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
+            if (!watcher.beforeLastClickedButton === watcher.lastClickedButton) {
+                
+                const $items = watcher.beforeLastContent.querySelectorAll('div');
+                console.log($items)
+                //watcher.beforeLastContent.lastElementChild.remove()
+            }
         }
+        
+        renderSldr(watcher.lastContent)
+        
         
         console.log(watcher)
         //renderSldr($content)
