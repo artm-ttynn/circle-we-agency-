@@ -22,7 +22,7 @@ $buttons.forEach(($button) => {
             if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
                 
                 const $textWrapper = watcher.beforeLastContent.firstElementChild
-                const $items = $textWrapper.children
+                const $items = $textWrapper.childNodes
                 
                 $items.forEach((item, index) => {
                     if (index !== 0) {
