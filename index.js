@@ -1,7 +1,4 @@
-const watcher = {
-    lastHeader,
-    lastClickedButton,
-}
+const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
 $contentBlocks.forEach(item => item.style = '')
