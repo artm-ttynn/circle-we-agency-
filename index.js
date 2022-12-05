@@ -21,7 +21,8 @@ $buttons.forEach(($button) => {
             
             if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
                 
-                const $items = watcher.beforeLastContent.children
+                const $textWrapper = watcher.beforeLastContent.firstElementChild
+                const $items = $textWrapper.children
                 console.log($items)
                 //watcher.beforeLastContent.lastElementChild.remove()
             }
