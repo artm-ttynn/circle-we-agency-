@@ -6,6 +6,7 @@ $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
         const $trigger = e.currentTarget;
         const $content = $trigger.parentElement.nextElementSibling;
+        console.log($content.style.maxHeight)
         $content.style.maxHeight = 'auto !important';
     })
 })
