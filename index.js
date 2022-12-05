@@ -8,7 +8,7 @@ $buttons.forEach(($button) => {
     })
 })
 
-/*$(document).ready(function(){
+$(document).ready(function(){
     const block = `t668`;
     const $wrapper = document.querySelector(`.${block}__textwrapper`)
     $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
@@ -25,7 +25,7 @@ $buttons.forEach(($button) => {
         nextArrow: renderArrow(`next`),
         appendArrows: $(`.sldr__control`),
     });
-});*/
+});
 
 document.body.addEventListener('click', (e) => {
     console.log(e.target)
