@@ -7,7 +7,17 @@ const $buttons = document.querySelectorAll('.t668__trigger-button')
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
         
-
+        if (!watcher.lastClickedButton) {
+            watcher.lastClickedButton = e.currentTarget;
+            watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling;
+        } else {
+            watcher.beforeLastClickedButton = watcher.lastClickedButton
+            watcher.beforeLastHeader = watcher.lastHeader
+            watcher.lastClickedButton = e.currentTarget
+            watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling
+            
+            console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
+        }
         
         console.log(watcher)
         //renderSldr($content)
