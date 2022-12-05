@@ -21,14 +21,8 @@ $buttons.forEach(($button) => {
             
             if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
                 
-                const $textWrapper = watcher.beforeLastContent.firstElementChild
-                const $items = $textWrapper.childNodes
-                
-                $items.forEach((item, index) => {
-                    if (index !== 0) {
-                        item.remove()
-                    }
-                })
+                const beforeLastSldr = watcher.beforeLastContent.getElementById('sldr')
+                beforeLastSldr.remove()
                 
                 renderSldr(watcher.lastContent)
             }
@@ -72,7 +66,7 @@ function renderArrow(position) {
 };
 
 const sldrTemp = `
-    <div style="width: 100%; display: flex; justify-content: center;">
+    <div id="sldr" style="width: 100%; display: flex; justify-content: center;">
     
     <div class="sldr__wrapper">
         <div class="sldr__container">
