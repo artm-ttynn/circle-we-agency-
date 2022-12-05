@@ -29,6 +29,7 @@ $buttons.forEach(($button) => {
 
 document.body.addEventListener('click', (e) => {
     console.log(e.target)
+    console.log(e.currentTarget)
     /*const $el = e.target
     if ($el.tagName === 'BUTTON') {
         console.log($el)
