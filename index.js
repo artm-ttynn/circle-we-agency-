@@ -10,6 +10,7 @@ $buttons.forEach(($button) => {
         if (!watcher.lastClickedButton) {
             watcher.lastClickedButton = e.currentTarget;
             watcher.lastContent = e.currentTarget.parentElement.nextElementSibling;
+            renderSldr($content)
         } else {
             watcher.beforeLastClickedButton = watcher.lastClickedButton
             watcher.beforeLastContent = watcher.lastContent
@@ -17,6 +18,7 @@ $buttons.forEach(($button) => {
             watcher.lastContent = e.currentTarget.parentElement.nextElementSibling
             
             console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
+            
             if (!watcher.beforeLastClickedButton === watcher.lastClickedButton) {
                 
                 const $items = watcher.beforeLastContent.querySelectorAll('div');
@@ -25,7 +27,7 @@ $buttons.forEach(($button) => {
             }
         }
         
-        renderSldr(watcher.lastContent)
+        //renderSldr(watcher.lastContent)
         
         
         console.log(watcher)
