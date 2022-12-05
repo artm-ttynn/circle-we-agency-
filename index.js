@@ -5,10 +5,12 @@ const $buttons = document.querySelectorAll('.t668__trigger-button')
 $buttons.forEach(($button) => {
     $button.addEventListener('click', () => {
         console.log('Клик')
+        console.log(e.target)
+        console.log(e.currentTarget)
     })
 })
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     const block = `t668`;
     const $wrapper = document.querySelector(`.${block}__textwrapper`)
     $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
@@ -25,12 +27,12 @@ $(document).ready(function(){
         nextArrow: renderArrow(`next`),
         appendArrows: $(`.sldr__control`),
     });
-});
+});*/
 
-document.body.addEventListener('click', (e) => {
+/*document.body.addEventListener('click', (e) => {
     console.log(e.target)
     console.log(e.currentTarget)
-    /*const $el = e.target
+    const $el = e.target
     if ($el.tagName === 'BUTTON') {
         console.log($el)
         
@@ -50,8 +52,8 @@ document.body.addEventListener('click', (e) => {
             nextArrow: renderArrow(`next`),
             appendArrows: $(`.sldr__control`),
         });
-    }*/
-})
+    }
+})*/
 
 function renderArrow(position) {
     return `<button class="arrow ${position}">
