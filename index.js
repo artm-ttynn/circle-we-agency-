@@ -15,7 +15,7 @@ $buttons.forEach(($button) => {
 
 function renderSldr(container) {
     const $textWrapper = container.querySelector('.t668__textwrapper')
-    $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
+    $textWrapper.insertAdjacentHTML('beforeend', sldrTemp);
     
     $('.sldr__list').slick({
         arrows: true,
