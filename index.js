@@ -1,14 +1,19 @@
+const watcher = {
+    lastHeader,
+    lastClickedButton,
+}
+
 const $contentBlocks = document.querySelectorAll('.t668__content')
 $contentBlocks.forEach(item => item.style = '')
 
 const $buttons = document.querySelectorAll('.t668__trigger-button')
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
-        const $trigger = e.currentTarget;
-        const $content = $trigger.parentElement.nextElementSibling;
-        console.log($content)
+        watcher.lastClickedButton = e.currentTarget;
+        watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling;
         
-        renderSldr($content)
+        console.log(watcher)
+        //renderSldr($content)
     })
 })
 
