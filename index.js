@@ -4,8 +4,9 @@ $contentBlocks.forEach(item => item.style = '')
 const $buttons = document.querySelectorAll('.t668__trigger-button')
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
-        const $trigger = e.currentTarget
-        console.log($trigger.parentElement.nextElementSibling)
+        const $trigger = e.currentTarget;
+        const $content = $trigger.parentElement.nextElementSibling);
+        $content.style.maxHeight = 'auto !important';
     })
 })
 
