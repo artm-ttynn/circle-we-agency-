@@ -10,7 +10,7 @@ $buttons.forEach(($button) => {
         if (!watcher.lastClickedButton) {
             watcher.lastClickedButton = e.currentTarget;
             watcher.lastContent = e.currentTarget.parentElement.nextElementSibling;
-            renderSldr($content)
+            renderSldr(watcher.lastContent)
         } else {
             watcher.beforeLastClickedButton = watcher.lastClickedButton
             watcher.beforeLastContent = watcher.lastContent
@@ -58,14 +58,7 @@ function renderArrow(position) {
     return `<button class="arrow ${position}">
         <div>
             <svg role="presentation" focusable="false" style="display: block" viewBox="0 0 9.3 17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <polyline 
-                    fill="none" 
-                    stroke="#222222" 
-                    stroke-linejoin="butt" 
-                    stroke-linecap="butt" 
-                    stroke-width="1" 
-                    points="0.5,0.5 8.5,8.5 0.5,16.5">
-                </polyline>
+                <polyline fill="none" stroke="#222222" stroke-linejoin="butt" stroke-linecap="butt" stroke-width="1" points="0.5,0.5 8.5,8.5 0.5,16.5"></polyline>
             </svg>
         </div>
     </button>`;
