@@ -21,7 +21,8 @@ $buttons.forEach(($button) => {
             
             if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
                 
-                const beforeLastSldr = watcher.beforeLastContent.getElementById('sldr')
+                const a = watcher.beforeLastContent
+                const beforeLastSldr = a.getElementById('sldr')
                 beforeLastSldr.remove()
                 
                 renderSldr(watcher.lastContent)
