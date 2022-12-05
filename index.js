@@ -1,6 +1,13 @@
 const $contentBlocks = document.querySelectorAll('.t668__content')
 $contentBlocks.forEach(item => item.style = '')
 
+const $buttons = document.querySelector('.t668__trigger-button')
+$buttons.forEach(($button) => {
+    $button.addEventListener('click', () => {
+        console.log('Клик')
+    })
+})
+
 /*$(document).ready(function(){
     const block = `t668`;
     const $wrapper = document.querySelector(`.${block}__textwrapper`)
