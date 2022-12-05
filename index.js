@@ -11,10 +11,13 @@ $buttons.forEach(($button) => {
             watcher.lastClickedButton = e.currentTarget;
             watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling;
         } else {
-            console.log(watcher.lastClickedButton === e.currentTarget)
+            watcher.beforeLastClickedButton = watcher.lastClickedButton
+            watcher.beforeLastHeader = watcher.lastHeader
+            watcher.lastClickedButton = e.currentTarget
+            watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling
         }
         
-        console.log(watcher)
+        console.log(watcher.lastClickedButton === watcher.clickedButton)
         //renderSldr($content)
     })
 })
