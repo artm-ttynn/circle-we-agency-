@@ -21,7 +21,7 @@ $buttons.forEach(($button) => {
             
             if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
                 
-                const $items = watcher.beforeLastContent.querySelectorAll('div');
+                const $items = watcher.beforeLastContent.children
                 console.log($items)
                 //watcher.beforeLastContent.lastElementChild.remove()
             }
