@@ -8,14 +8,14 @@ $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
         
         if (!watcher.lastClickedButton) {
-            watcher.lastClickedButton = e.currentTarget;
-            watcher.lastContent = e.currentTarget.parentElement.nextElementSibling;
+            watcher.lastClickedButton = e.currentTarget
+            watcher.lastContent = e.currentTarget.parentNode.nextSibling
             renderSldr(watcher.lastContent)
         } else {
             watcher.beforeLastClickedButton = watcher.lastClickedButton
             watcher.beforeLastContent = watcher.lastContent
             watcher.lastClickedButton = e.currentTarget
-            watcher.lastContent = e.currentTarget.parentElement.nextElementSibling
+            watcher.lastContent = e.currentTarget.parentNode.nextSibling
             
             console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
             
