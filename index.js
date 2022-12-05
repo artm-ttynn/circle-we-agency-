@@ -6,8 +6,13 @@ $contentBlocks.forEach(item => item.style = '')
 const $buttons = document.querySelectorAll('.t668__trigger-button')
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
-        watcher.lastClickedButton = e.currentTarget;
-        watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling;
+        
+        if (!watcher.lastClickedButton) {
+            watcher.lastClickedButton = e.currentTarget;
+            watcher.lastHeader = e.currentTarget.parentElement.nextElementSibling;
+        } else {
+            console.log(watcher.lastClickedButton === e.currentTarget)
+        }
         
         console.log(watcher)
         //renderSldr($content)
