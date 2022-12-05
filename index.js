@@ -23,8 +23,14 @@ $buttons.forEach(($button) => {
                 
                 const $textWrapper = watcher.beforeLastContent.firstElementChild
                 const $items = $textWrapper.children
-                console.log($items)
-                //watcher.beforeLastContent.lastElementChild.remove()
+                
+                $items.forEach((item, index) => {
+                    if (index !== 0) {
+                        item.remove()
+                    }
+                })
+                
+                renderSldr(watcher.lastContent)
             }
         }
         
