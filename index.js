@@ -19,7 +19,7 @@ $buttons.forEach(($button) => {
             
             console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
             
-            if (!watcher.beforeLastClickedButton === watcher.lastClickedButton) {
+            if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
                 
                 const $items = watcher.beforeLastContent.querySelectorAll('div');
                 console.log($items)
