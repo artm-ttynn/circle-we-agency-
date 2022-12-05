@@ -11,11 +11,11 @@ $buttons.forEach(($button) => {
     })
 })
 
-/*$(document).ready(function(){
-    const block = `t668`;
-    const $wrapper = document.querySelector(`.${block}__textwrapper`)
-    $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
 
+function renderSldr(container) {
+    const $textWrapper = container.querySelector('.t668__textwrapper')
+    $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
+    
     $('.sldr__list').slick({
         arrows: true,
         infinite: true,
@@ -28,33 +28,7 @@ $buttons.forEach(($button) => {
         nextArrow: renderArrow(`next`),
         appendArrows: $(`.sldr__control`),
     });
-});*/
-
-/*document.body.addEventListener('click', (e) => {
-    console.log(e.target)
-    console.log(e.currentTarget)
-    const $el = e.target
-    if ($el.tagName === 'BUTTON') {
-        console.log($el)
-        
-        const block = `t668`;
-        const $wrapper = document.querySelector(`.${block}__textwrapper`)
-        $wrapper.insertAdjacentHTML('beforeend', sldrTemp);
-
-        $('.sldr__list').slick({
-            arrows: true,
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: `linear`,
-            dots: true,
-            appendDots: $(`.sldr__points`),
-            prevArrow: renderArrow(`prev`),
-            nextArrow: renderArrow(`next`),
-            appendArrows: $(`.sldr__control`),
-        });
-    }
-})*/
+}
 
 function renderArrow(position) {
     return `<button class="arrow ${position}">
