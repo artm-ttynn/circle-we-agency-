@@ -21,7 +21,8 @@ $contentBlocks.forEach(item => item.style = '')
 });*/
 
 document.body.addEventListener('click', (e) => {
-    const $el = e.target
+    console.log(e.target)
+    /*const $el = e.target
     if ($el.tagName === 'BUTTON') {
         console.log($el)
         
@@ -41,7 +42,7 @@ document.body.addEventListener('click', (e) => {
             nextArrow: renderArrow(`next`),
             appendArrows: $(`.sldr__control`),
         });
-    }
+    }*/
 })
 
 function renderArrow(position) {
