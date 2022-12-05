@@ -1,7 +1,7 @@
 const $contentBlocks = document.querySelectorAll('.t668__content')
 $contentBlocks.forEach(item => item.style = '')
 
-const $buttons = document.querySelector('.t668__trigger-button')
+const $buttons = document.querySelectorAll('.t668__trigger-button')
 $buttons.forEach(($button) => {
     $button.addEventListener('click', () => {
         console.log('Клик')
