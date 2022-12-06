@@ -10,9 +10,12 @@ $contentBlocks.forEach((item) => {
 })
 
 const $buttons = document.querySelectorAll('.t668__trigger-button')
+
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
         renderSldr(watcher.currentContent)
+    });
+});
         
         /*if (!watcher.currentButton) {
             watcher.currentButton = e.currentTarget
@@ -34,15 +37,12 @@ $buttons.forEach(($button) => {
                 
                 renderSldr(watcher.lastContent)
             }*/
-        }
-        
+
         //renderSldr(watcher.lastContent)
         
         
-        console.log(watcher)
         //renderSldr($content)
-    })
-})*/
+
 
 
 function renderSldr(container) {
