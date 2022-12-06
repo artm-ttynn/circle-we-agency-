@@ -1,7 +1,7 @@
 //const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach((item, i) => {
+$contentBlocks.forEach((item) => {
     const $el = document.createElement('div')
     $el.style.width = '100%'
     $el.style.height = '600px'
@@ -9,10 +9,10 @@ $contentBlocks.forEach((item, i) => {
     item.append($el)
 })
 
-const $slider = document.querySelector('.sldr')
-console.log($slider)
+//const $slider = document.querySelector('.sldr')
+//console.log($slider)
 
-renderSldr($slider)
+//renderSldr($slider)
 
 /*const $buttons = document.querySelectorAll('.t668__trigger-button')
 
