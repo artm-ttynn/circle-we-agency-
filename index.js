@@ -1,4 +1,4 @@
-const watcher = {}
+//const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
 $contentBlocks.forEach((item, i) => {
@@ -9,7 +9,7 @@ $contentBlocks.forEach((item, i) => {
     item.append($el)
 })
 
-const $sliders = document.querySelector('.sldr')
+const $slider = document.querySelector('.sldr')
 renderSldr($sliders)
 
 /*const $buttons = document.querySelectorAll('.t668__trigger-button')
@@ -51,7 +51,7 @@ $buttons.forEach(($button) => {
 
 function renderSldr(container) {
     //const $textWrapper = container.querySelector('.sldr')
-    container.insertAdjacentHTML('afterbegin', sldrTemp);
+    container.innerHTML = sldrTemp;
     
     $('.sldr__list').slick({
         arrows: true,
