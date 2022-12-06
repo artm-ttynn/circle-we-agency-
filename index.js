@@ -13,7 +13,8 @@ const $buttons = document.querySelectorAll('.t668__trigger-button')
 
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
-        renderSldr(watcher.currentContent)
+        const first = document.querySelector('.sldr')
+        renderSldr(first)
     });
 });
         
