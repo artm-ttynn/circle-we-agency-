@@ -10,7 +10,9 @@ $contentBlocks.forEach((item, i) => {
 })
 
 const $slider = document.querySelector('.sldr')
-renderSldr($sliders)
+console.log($slider)
+
+renderSldr($slider)
 
 /*const $buttons = document.querySelectorAll('.t668__trigger-button')
 
