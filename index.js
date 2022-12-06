@@ -1,14 +1,15 @@
 //const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach((item) => {
-    const $el = document.createElement('div')
-    $el.style.width = '100%'
-    $el.style.height = '600px'
-    $el.classList.add('sldr')
-    item.append($el)
-})
+$contentBlocks.forEach((item, i) => createSldr(item, i))
 
+function createSldr(item, i) {
+    const $wrapperSldr = document.createElement('div')
+    $wrapperSldr.classList.add('sldr__wrapper')
+    $wrapperSldr.dataset.sldr = i
+    item.append($wrapperSldr)
+}
+    
 //const $slider = document.querySelector('.sldr')
 //console.log($slider)
 
