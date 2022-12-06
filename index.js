@@ -3,12 +3,34 @@
 const $contentBlocks = document.querySelectorAll('.t668__content')
 $contentBlocks.forEach((item, i) => createSldr(item, i))
 
+const template = `
+    <div class="sldr__body">
+        <div class="sldr__container">
+            <div class="sldr__control"></div>
+            <div class="sldr__list">
+                <div>
+                    <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg);"></div>
+                </div>
+                <div>
+                    <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg);"></div>
+                </div>
+                <div>
+                    <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-03.jpg);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sldr__points"></div>
+    </div>`;
+
 function createSldr(item, i) {
     const $wrapperSldr = document.createElement('div')
     $wrapperSldr.classList.add('sldr__wrapper')
     $wrapperSldr.dataset.sldr = i
+    $wrapperSldr.innerHTML = template
     item.append($wrapperSldr)
 }
+
+
     
 //const $slider = document.querySelector('.sldr')
 //console.log($slider)
