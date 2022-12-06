@@ -5,32 +5,35 @@ $contentBlocks.forEach((item, i) => {
     const $el = document.createElement('div')
     $el.style.width = '100%'
     $el.style.height = '600px'
-    $el.setAttribute('sldr', i)
+    $el.classList.add('sldr')
     item.append($el)
 })
 
 const $buttons = document.querySelectorAll('.t668__trigger-button')
-/*$buttons.forEach(($button) => {
+$buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
+        renderSldr(watcher.currentContent)
         
-        if (!watcher.lastClickedButton) {
-            watcher.lastClickedButton = e.currentTarget
-            watcher.lastContent = e.currentTarget.parentNode.nextSibling
-            renderSldr(watcher.lastContent)
+        /*if (!watcher.currentButton) {
+            watcher.currentButton = e.currentTarget
+            watcher.currentContent = e.currentTarget.parentNode.nextSibling
+            renderSldr(watcher.currentContent)
         } else {
-            watcher.beforeLastClickedButton = watcher.lastClickedButton
-            watcher.beforeLastContent = watcher.lastContent
-            watcher.lastClickedButton = e.currentTarget
-            watcher.lastContent = e.currentTarget.parentNode.nextSibling
+            watcher.lastButton = watcher.currentButton
+            watcher.lastContent = watcher.currentContent
+            watcher.currentButton = e.currentTarget
+            watcher.currentContent = e.currentTarget.parentNode.nextSibling
             
-            console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
+            console.log(watcher.lastButton === watcher.currentButton)
             
-            if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
-                const beforeLastSldr = watcher.beforeLastContent.querySelector('#sldr')
-                beforeLastSldr.remove()
+            //удаление предыдущего слайдера и добавление нового
+            if (watcher.lastButton !== watcher.currentButton) {
+                const lastSldrContainer = watcher.lastContent.lastChild
+                const lastSldr = lastSldrContainer.firstChild
+                lastSldr.remove()
                 
                 renderSldr(watcher.lastContent)
-            }
+            }*/
         }
         
         //renderSldr(watcher.lastContent)
@@ -43,7 +46,7 @@ const $buttons = document.querySelectorAll('.t668__trigger-button')
 
 
 function renderSldr(container) {
-    const $textWrapper = container.querySelector('.t668__textwrapper')
+    const $textWrapper = container.querySelector('.sldr')
     $textWrapper.insertAdjacentHTML('beforeend', sldrTemp);
     
     $('.sldr__list').slick({
