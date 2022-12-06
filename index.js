@@ -1,10 +1,15 @@
 const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach(item => item.style = '')
+$contentBlocks.forEach((item) => {
+    const $div = document.createElement('div')
+    $div.style.width = '100%'
+    $div.style.height = '600px'
+    item.append($div)
+})
 
 const $buttons = document.querySelectorAll('.t668__trigger-button')
-$buttons.forEach(($button) => {
+/*$buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
         
         if (!watcher.lastClickedButton) {
@@ -20,9 +25,7 @@ $buttons.forEach(($button) => {
             console.log(watcher.beforeLastClickedButton === watcher.lastClickedButton)
             
             if (watcher.beforeLastClickedButton !== watcher.lastClickedButton) {
-                
-                const a = watcher.beforeLastContent
-                const beforeLastSldr = a.querySelector('#sldr')
+                const beforeLastSldr = watcher.beforeLastContent.querySelector('#sldr')
                 beforeLastSldr.remove()
                 
                 renderSldr(watcher.lastContent)
@@ -35,7 +38,7 @@ $buttons.forEach(($button) => {
         console.log(watcher)
         //renderSldr($content)
     })
-})
+})*/
 
 
 function renderSldr(container) {
