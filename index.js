@@ -6,13 +6,11 @@ $contentBlocks.forEach((item, i) => {
     $el.style.width = '100%'
     $el.style.height = '600px'
     $el.classList.add('sldr')
-    
-    if (i === 0) {
-        renderSldr($el)
-    }
-    
     item.append($el)
 })
+
+const $sliders = document.querySelector('.sldr')
+renderSldr($sliders)
 
 /*const $buttons = document.querySelectorAll('.t668__trigger-button')
 
