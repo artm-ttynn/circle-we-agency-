@@ -1,11 +1,12 @@
 const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach((item) => {
-    const $div = document.createElement('div')
-    $div.style.width = '100%'
-    $div.style.height = '600px'
-    item.append($div)
+$contentBlocks.forEach((item, i) => {
+    const $el = document.createElement('div')
+    $el.style.width = '100%'
+    $el.style.height = '600px'
+    $el.setAttribute('sldr', i)
+    item.append($el)
 })
 
 const $buttons = document.querySelectorAll('.t668__trigger-button')
