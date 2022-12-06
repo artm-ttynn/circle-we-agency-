@@ -13,13 +13,13 @@ function createSldr(item, i) {
             <div class="sldr__container">
                 <div class="sldr__control"></div>
                 <div class="sldr__list">
-                    <div class="sldr__list-item">
+                    <div>
                         <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg);"></div>
                     </div>
-                    <div class="sldr__list-item">
+                    <div>
                         <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg);"></div>
                     </div>
-                    <div class="sldr__list-item">
+                    <div>
                         <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-03.jpg);"></div>
                     </div>
                 </div>
