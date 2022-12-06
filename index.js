@@ -49,6 +49,7 @@ function initSldr() {
     }
 }
 
+initSldr()
 
     
 //const $slider = document.querySelector('.sldr')
