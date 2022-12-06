@@ -1,7 +1,7 @@
 const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach((item, i) => {
+$contentBlocks.forEach((item) => {
     const $el = document.createElement('div')
     $el.style.width = '100%'
     $el.style.height = '600px'
