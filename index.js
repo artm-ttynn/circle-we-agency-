@@ -1,22 +1,27 @@
 const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach((item) => {
+$contentBlocks.forEach((item, i) => {
     const $el = document.createElement('div')
     $el.style.width = '100%'
     $el.style.height = '600px'
     $el.classList.add('sldr')
+    
+    if (i === 0) {
+        renderSldr($el)
+    }
+    
     item.append($el)
 })
 
-const $buttons = document.querySelectorAll('.t668__trigger-button')
+/*const $buttons = document.querySelectorAll('.t668__trigger-button')
 
 $buttons.forEach(($button) => {
     $button.addEventListener('click', (e) => {
         const first = document.querySelector('.sldr')
         renderSldr(first)
     });
-});
+});*/
         
         /*if (!watcher.currentButton) {
             watcher.currentButton = e.currentTarget
