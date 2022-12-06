@@ -30,6 +30,25 @@ function createSldr(item, i) {
     item.append($wrapperSldr)
 }
 
+function initSldr() {
+    const $sldrs = document.querySelectorAll('.sldr__wrapper')
+    
+    for (let i = 0; i < $sldrs.length; i++) {
+        $(`[data-sldr="${i}"] .sldr__list`).slick({
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: `linear`,
+            dots: true,
+            appendDots: $(`[data-sldr="${i}"] .sldr__points`),
+            prevArrow: renderArrow(`prev`),
+            nextArrow: renderArrow(`next`),
+            appendArrows: $(`[data-sldr="${i}"] .sldr__control`),
+        });
+    }
+}
+
 
     
 //const $slider = document.querySelector('.sldr')
