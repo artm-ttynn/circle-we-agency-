@@ -3,6 +3,10 @@
 const $contentBlocks = document.querySelectorAll('.t668__content')
 console.log($contentBlocks.length)
 
+fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
+    .then((response) => response.json())
+    .then((tutorials) => console.log(tutorials))
+
 //$contentBlocks.forEach((item, i) => createSldr(item, i))
 
 function createSldr(item, i) {
