@@ -1,39 +1,42 @@
-//const watcher = {}
-
-const $contentBlocks = document.querySelectorAll('.t668__content')
-console.log($contentBlocks.length)
-
 fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
     .then((response) => response.json())
     .then((tutorials) => console.log(tutorials))
 
-//$contentBlocks.forEach((item, i) => createSldr(item, i))
+function createSldr(tutorials) {
 
-function createSldr(item, i) {
-    const $wrapperSldr = document.createElement('div')
-    $wrapperSldr.classList.add('sldr__wrapper')
-    $wrapperSldr.dataset.sldr = i
+  const $contentBlocks = document.querySelectorAll('.t668__content')
+  console.log(`content blocks = ${$contentBlocks.length}`)
+  console.log(`tutorials = ${tutorials.length}`)
+  
+  for (let i = 0; i < tutorials.length; i++) {
     
-    $wrapperSldr.innerHTML = `
+    const {section, id, n} = tutorials[i]
+    
+    if (Number(n) > 0) {
+      const $sldrListContent = ``
+            
+      for (let j = 1; j <= n; j++) {
+        $sldrListContent += `<div><div class="sldr__image" style="background:url(https://artm-ttynn.github.io/circle-we-agency/img/tutorials/${section}/${id}-${j});"></div></div>`
+      }
+      
+      const $wrapperSldr = document.createElement('div')
+      $wrapperSldr.classList.add('sldr__wrapper')
+      $wrapperSldr.dataset.sldr = i
+      
+      $wrapperSldr.innerHTML = `
         <div class="sldr__body">
             <div class="sldr__container">
                 <div class="sldr__control"></div>
-                <div class="sldr__list">
-                    <div>
-                        <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg);"></div>
-                    </div>
-                    <div>
-                        <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg);"></div>
-                    </div>
-                    <div>
-                        <div class="sldr__image" style="background: url(https://artm-ttynn.github.io/circle-we-agency/img/image-03.jpg);"></div>
-                    </div>
-                </div>
+                <div class="sldr__list">${$sldrListContent}</div>
             </div>
             <div class="sldr__points"></div>
         </div>`;
-    
-    item.append($wrapperSldr)
+      
+      $contentBlocks[i].append($wrapperSldr)
+    }    
+  }
+  
+  initSldr()
 }
 
 function initSldr() {
@@ -55,69 +58,6 @@ function initSldr() {
     }
 }
 
-//initSldr()
-
-    
-//const $slider = document.querySelector('.sldr')
-//console.log($slider)
-
-//renderSldr($slider)
-
-/*const $buttons = document.querySelectorAll('.t668__trigger-button')
-
-$buttons.forEach(($button) => {
-    $button.addEventListener('click', (e) => {
-        const first = document.querySelector('.sldr')
-        renderSldr(first)
-    });
-});*/
-        
-        /*if (!watcher.currentButton) {
-            watcher.currentButton = e.currentTarget
-            watcher.currentContent = e.currentTarget.parentNode.nextSibling
-            renderSldr(watcher.currentContent)
-        } else {
-            watcher.lastButton = watcher.currentButton
-            watcher.lastContent = watcher.currentContent
-            watcher.currentButton = e.currentTarget
-            watcher.currentContent = e.currentTarget.parentNode.nextSibling
-            
-            console.log(watcher.lastButton === watcher.currentButton)
-            
-            //удаление предыдущего слайдера и добавление нового
-            if (watcher.lastButton !== watcher.currentButton) {
-                const lastSldrContainer = watcher.lastContent.lastChild
-                const lastSldr = lastSldrContainer.firstChild
-                lastSldr.remove()
-                
-                renderSldr(watcher.lastContent)
-            }*/
-
-        //renderSldr(watcher.lastContent)
-        
-        
-        //renderSldr($content)
-
-
-
-function renderSldr(container) {
-    //const $textWrapper = container.querySelector('.sldr')
-    container.innerHTML = sldrTemp;
-    
-    $('.sldr__list').slick({
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: `linear`,
-        dots: true,
-        appendDots: $(`.sldr__points`),
-        prevArrow: renderArrow(`prev`),
-        nextArrow: renderArrow(`next`),
-        appendArrows: $(`.sldr__control`),
-    });
-}
-
 function renderArrow(position) {
     return `<button class="arrow ${position}">
         <div>
@@ -127,24 +67,3 @@ function renderArrow(position) {
         </div>
     </button>`;
 };
-
-const sldrTemp = `
-    <div id="sldr" style="width: 100%; display: flex; justify-content: center;">
-    
-    <div class="sldr__wrapper">
-        <div class="sldr__container">
-            <div class="sldr__control"></div>
-            <div class="sldr__list">
-                <div>
-                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-01.jpg"/>
-                </div>
-                <div>
-                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-02.jpg"/>
-                </div>
-                <div>
-                    <img src="https://artm-ttynn.github.io/circle-we-agency/img/image-03.jpg"/>
-                </div>
-            </div>
-        </div>
-        <div class="sldr__points"></div>
-    </div></div>`;
