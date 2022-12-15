@@ -1,6 +1,6 @@
 fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
     .then((response) => response.json())
-    .then((tutorials) => console.log(tutorials))
+    .then((tutorials) => createSldr(tutorials))
 
 function createSldr(tutorials) {
 
