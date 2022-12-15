@@ -13,7 +13,7 @@ function createSldr(tutorials) {
     const {section, id, n} = tutorials[i]
     
     if (Number(n) > 0) {
-      const $sldrListContent = ``
+      let $sldrListContent = ``
             
       for (let j = 1; j <= n; j++) {
         $sldrListContent += `<div><div class="sldr__image" style="background:url(https://artm-ttynn.github.io/circle-we-agency/img/tutorials/${section}/${id}-${j});"></div></div>`
