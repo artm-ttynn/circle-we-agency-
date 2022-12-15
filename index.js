@@ -1,7 +1,9 @@
 //const watcher = {}
 
 const $contentBlocks = document.querySelectorAll('.t668__content')
-$contentBlocks.forEach((item, i) => createSldr(item, i))
+console.log($contentBlocks.length)
+
+//$contentBlocks.forEach((item, i) => createSldr(item, i))
 
 function createSldr(item, i) {
     const $wrapperSldr = document.createElement('div')
@@ -49,7 +51,7 @@ function initSldr() {
     }
 }
 
-initSldr()
+//initSldr()
 
     
 //const $slider = document.querySelector('.sldr')
