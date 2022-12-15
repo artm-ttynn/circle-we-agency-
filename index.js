@@ -5,11 +5,11 @@ fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
 function createSldr(tutorials) {
   const $contentBlocks = document.querySelectorAll('.t668__content')
   
-  for (let i = 0; i < tutorials.length; i++) {
+  for (let i = 0; i < $contentBlocks.length; i++) {
     
     const {section, id, n} = tutorials[i]
     
-    if (Number(n) > 0) {
+    if (+n > 0) {
       let $sldrListContent = ``
             
       for (let j = 1; j <= n; j++) {
