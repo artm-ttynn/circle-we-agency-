@@ -37,6 +37,9 @@ function createSldr(tutorials) {
   }
   
   initSldr()
+    
+  const $slickInit = document.querySelectorAll('.slick-initialized')
+  console.log(`slick = ${$slickInit.length}`)
 }
 
 function initSldr() {
