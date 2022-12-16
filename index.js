@@ -44,6 +44,7 @@ function createSldr(tutorials) {
 
 function initSldr() {
     const $sldrs = document.querySelectorAll('.sldr__wrapper')
+    console.log(`wrappers = ${$sldrs.length}`)
     
     for (let i = 0; i < $sldrs.length; i++) {
         $(`[data-sldr="${i}"] .sldr__list`).slick({
