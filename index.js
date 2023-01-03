@@ -1,9 +1,10 @@
+const sldrNums = []
+
 fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
     .then((response) => response.json())
     .then((tutorials) => createSldr(tutorials))
 
 function createSldr(tutorials) {
-  const sldrNums = []
   const $contentBlocks = document.querySelectorAll('.t668__content')
   
   console.log(`Количество блоков = ${$contentBlocks.length}`)
