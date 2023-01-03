@@ -39,12 +39,12 @@ function createSldr(tutorials) {
   initSldr()
     
   const $slickInit = document.querySelectorAll('.slick-initialized')
-  console.log(`slick = ${$slickInit.length}`)
+  console.log(`Количество слайдеров = ${$slickInit.length}`)
 }
 
 function initSldr() {
     const $sldrs = document.querySelectorAll('.sldr__wrapper')
-    console.log(`Количество созданных слайдеров = ${$sldrs.length}`)
+    console.log(`Количество блоков для слайдеров = ${$sldrs.length}`)
     
     for (let i = 0; i < $sldrs.length; i++) {
         $(`[data-sldr="${i}"] .sldr__list`).slick({
