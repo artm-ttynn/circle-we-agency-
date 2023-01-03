@@ -55,6 +55,14 @@ function initSldr() {
             prevArrow: renderArrow(`prev`),
             nextArrow: renderArrow(`next`),
             appendArrows: $(`[data-sldr="${sldr}"] .sldr__control`),
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
         });
     }
 }
