@@ -5,12 +5,12 @@ fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
 function createSldr(tutorials) {
   const $contentBlocks = document.querySelectorAll('.t668__content')
   
-  console.log(`blocks = ${$contentBlocks.length}`)
-  console.log(`tutorials = ${tutorials.length}`)
+  console.log(`Количество блоков = ${$contentBlocks.length}`)
+  console.log(`Количество туториалов = ${tutorials.length}`)
   
   for (let i = 0; i < $contentBlocks.length; i++) {
     
-    const {section, id, n} = tutorials[i]
+    const { section, id, n } = tutorials[i]
     
     if (+n > 0) {
       let $sldrListContent = ``
@@ -44,7 +44,7 @@ function createSldr(tutorials) {
 
 function initSldr() {
     const $sldrs = document.querySelectorAll('.sldr__wrapper')
-    console.log(`wrappers = ${$sldrs.length}`)
+    console.log(`Количество созданных слайдеров = ${$sldrs.length}`)
     
     for (let i = 0; i < $sldrs.length; i++) {
         $(`[data-sldr="${i}"] .sldr__list`).slick({
