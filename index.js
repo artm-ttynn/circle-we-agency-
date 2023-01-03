@@ -3,6 +3,7 @@ fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
     .then((tutorials) => createSldr(tutorials))
 
 function createSldr(tutorials) {
+  const sldrNums = []
   const $contentBlocks = document.querySelectorAll('.t668__content')
   
   console.log(`Количество блоков = ${$contentBlocks.length}`)
@@ -14,6 +15,7 @@ function createSldr(tutorials) {
     
     if (+n > 0) {
       let $sldrListContent = ``
+      sldrNums.push(i)
             
       for (let j = 1; j <= n; j++) {
         $sldrListContent += `<div><div class="sldr__image" style="background:url(https://artm-ttynn.github.io/circle-we-agency/img/tutorials/${section}/${id}-${j}.jpg);"></div></div>`
@@ -47,7 +49,7 @@ function initSldr() {
     console.log(`Количество блоков для слайдеров = ${$sldrs.length}`)
     
     for (let i = 0; i < $sldrs.length; i++) {
-        $(`[data-sldr="${i}"] .sldr__list`).slick({
+        $(`[data-sldr="${sldrNums[i]}"] .sldr__list`).slick({
             arrows: true,
             infinite: true,
             speed: 500,
