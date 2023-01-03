@@ -50,17 +50,19 @@ function initSldr() {
     console.log(`Количество блоков для слайдеров = ${$sldrs.length}`)
     
     for (let i = 0; i < $sldrs.length; i++) {
-        $(`[data-sldr="${sldrNums[i]}"] .sldr__list`).slick({
+        const sldr = sldrNums[i]
+        
+        $(`[data-sldr="${sldr}"] .sldr__list`).slick({
             arrows: true,
             infinite: true,
             speed: 500,
             fade: true,
             cssEase: `linear`,
             dots: true,
-            appendDots: $(`[data-sldr="${sldrNums[i]}"] .sldr__points`),
+            appendDots: $(`[data-sldr="${sldr}"] .sldr__points`),
             prevArrow: renderArrow(`prev`),
             nextArrow: renderArrow(`next`),
-            appendArrows: $(`[data-sldr="${sldrNums[i]}"] .sldr__control`),
+            appendArrows: $(`[data-sldr="${sldr}"] .sldr__control`),
         });
     }
 }
