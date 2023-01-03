@@ -57,10 +57,10 @@ function initSldr() {
             fade: true,
             cssEase: `linear`,
             dots: true,
-            appendDots: $(`[data-sldr="${i}"] .sldr__points`),
+            appendDots: $(`[data-sldr="${sldrNums[i]}"] .sldr__points`),
             prevArrow: renderArrow(`prev`),
             nextArrow: renderArrow(`next`),
-            appendArrows: $(`[data-sldr="${i}"] .sldr__control`),
+            appendArrows: $(`[data-sldr="${sldrNums[i]}"] .sldr__control`),
         });
     }
 }
