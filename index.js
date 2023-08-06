@@ -1,7 +1,7 @@
 const h = window.location.host
 const p = window.location.pathname
 
-const g = 'AKfycbyEZUcSs7tEm4ndWT_ObDSyIbMYA_HjAArj4rc99vijM1B8Q3kbdPLyDk4m5fcoIVaAuA'
+const g = 'AKfycbzACKTazWXDpBotjRVEcWcdakt4ZKfX_RxU7jPoITlsWsobDPmqYkj6qCcbdNqkFwTdYA'
 fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}`)
     .then(r => r.json())
     .then(d => console.log(d))
