@@ -19,14 +19,7 @@ const t = setInterval(function () {
                 .then(r => r.json())
                 .then(d => console.log(d))
     }
-}, 1000) 
-
-const u = window.mauser.email
-
-fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}${u ? '&user=' + u : ''}`)
-    .then(r => r.json())
-    .then(d => console.log(d))
-
+}, 1000)
 
 const sldrNums = []
 
