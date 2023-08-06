@@ -1,3 +1,10 @@
+const h = window.location.host
+const g = 'AKfycbyEZUcSs7tEm4ndWT_ObDSyIbMYA_HjAArj4rc99vijM1B8Q3kbdPLyDk4m5fcoIVaAuA'
+fetch(`https://script.google.com/macros/s/${g}/exec?host=${h.replaceAll('.', '')}`)
+    .then(r => r.json())
+    .then(d => console.log(d))
+
+
 const sldrNums = []
 
 fetch(`https://artm-ttynn.github.io/circle-we-agency/tutorials.json`)
