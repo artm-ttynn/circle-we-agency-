@@ -3,7 +3,7 @@ const p = window.location.pathname
 const g = 'AKfycbyYCiKcYEcoCz4tKH-bvGdy10rtmQtIbrahNL6EGT5vugV8A1w9yJBFYe4DlsAW4tHTPw'
 let c = 0
 
-const t = seTinterval(function user() {
+const t = setInterval(function () {
     if (c < 10) {
         if (window.mauser.email) {
             clearInterval(t)
