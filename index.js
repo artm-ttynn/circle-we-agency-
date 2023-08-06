@@ -1,8 +1,9 @@
 const h = window.location.host
 const p = window.location.pathname
+const u = window.mauser.email
 
 const g = 'AKfycbzACKTazWXDpBotjRVEcWcdakt4ZKfX_RxU7jPoITlsWsobDPmqYkj6qCcbdNqkFwTdYA'
-fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}`)
+fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}&user=${u}`)
     .then(r => r.json())
     .then(d => console.log(d))
 
