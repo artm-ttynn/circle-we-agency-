@@ -1,8 +1,29 @@
 const h = window.location.host
 const p = window.location.pathname
-const u = window.mauser.email
 const g = 'AKfycbyYCiKcYEcoCz4tKH-bvGdy10rtmQtIbrahNL6EGT5vugV8A1w9yJBFYe4DlsAW4tHTPw'
-fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}&user=${u}`)
+let c = 0
+
+const t = seTinterval(function() {
+    if (c < 10) {
+        if (window.mauser.email) {
+            clearInterval(t)
+            const u = window.mauser.email
+            fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}&user=${u}`)
+                .then(r => r.json())
+                .then(d => console.log(d))
+        }
+        c++
+    } else {
+        clearInterval(t)
+        fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}`)
+                .then(r => r.json())
+                .then(d => console.log(d))
+    }
+}, 1000) 
+
+const u = window.mauser.email
+
+fetch(`https://script.google.com/macros/s/${g}/exec?host=${h}&pathname=${p}${u ? '&user=' + u : ''}`)
     .then(r => r.json())
     .then(d => console.log(d))
 
